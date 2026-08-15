@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\vg}{v_{\mathrm g}}
+\newcommand{\vph}{v_{\mathrm p}}
+\newcommand{\Heaviside}{\mathrm{H}}
+
+\title{Causal Buildup and Selective Excitation of Lamb Waves\\
+by Thermoelastic Laser Sources}
+\author{Author name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Frequency-domain models of laser-generated Lamb waves describe the asymptotic
+harmonic response but do not determine how rapidly that response is established.
+We formulate the switched-on thermoelastic excitation of an isotropic plate as a
+causal modal problem. The formulation separates the steady harmonic field from
+the transient contribution and exposes the roles of group velocity, dispersion
+curvature, attenuation, source width, and observation distance. It also provides
+a common framework for finite bursts and for moving or spatially periodic laser
+sources. Particular attention is paid to zero-group-velocity points, where a
+propagation-time estimate fails and damping controls resonant buildup. The aim is
+to turn transient formation into experimentally useful predictions of required
+burst length and time-dependent modal purity.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/elasticity}
+\input{sections/lamb_modes}
+\input{sections/thermoelastic_source}
+\input{sections/causal_response}
+\input{sections/moving_laser}
+\input{sections/outlook}
+
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography}
+\end{document}

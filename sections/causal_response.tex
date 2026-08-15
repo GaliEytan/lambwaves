@@ -1,0 +1,62 @@
+\section{Causal buildup of the harmonic response}
+
+Let $a_n(k,t)$ denote a normalized modal coordinate. A minimal damped model is
+\begin{equation}
+ \ddot a_n+2\gamma_n(k)\dot a_n+\omega_n^2(k)a_n=F_n(k,t),
+ \qquad a_n(k,0)=\dot a_n(k,0)=0.
+ \label{eq:modal-oscillator}
+\end{equation}
+For the source in Eq.~\eqref{eq:laser-source}, causal convolution with the modal
+Green function yields
+\begin{equation}
+ u(x,z,t)=\sum_n\int\frac{\dd k}{2\pi}\,
+ \bm\phi_n(z;k)\ee^{\ii kx}
+ \int_0^t G_n(k,t-t')F_n(k,t')\,\dd t'.
+ \label{eq:causal-response}
+\end{equation}
+The time integral can be separated exactly into a forced harmonic term and terms
+at the damped natural frequency:
+\begin{equation}
+  u_n=u_{n,\mathrm{ss}}+u_{n,\mathrm{tr}}.
+\end{equation}
+We define a practical settling time by
+\begin{equation}
+ t_{\mathrm{ss},n}(x,\epsilon)=
+ \inf\left\{t:\frac{|u_{n,\mathrm{tr}}(x,t')|}
+ {|u_{n,\mathrm{ss}}(x,t')|}<\epsilon
+ \ \text{for all }t'>t\right\}.
+ \label{eq:settling-time}
+\end{equation}
+Zeros of the denominator and beat nodes require an envelope- or cycle-averaged
+version of Eq.~\eqref{eq:settling-time} in numerical work.
+
+Away from special points, the transient phase is
+\begin{equation}
+ \Phi(k)=kx-\omega_n(k)t,
+\end{equation}
+and stationary contributions satisfy
+\begin{equation}
+ \omega_n'(k)=\frac{x}{t}.
+ \label{eq:stationary-phase}
+\end{equation}
+Consequently the decay depends on $\omega_n''$, higher derivatives at degenerate
+points, and the source spectrum---not solely on a single group velocity.
+
+At exact ZGV resonance, Eq.~\eqref{eq:zgv-expansion} gives an impulse response
+proportional to $t^{-1/2}\ee^{-\ii\omega_0t}$ for a generic one-dimensional
+spectral integral. Continuous resonant forcing therefore produces idealized
+$\sqrt{t}$ growth. Attenuation changes the kernel to
+$t^{-1/2}\ee^{-\gamma t}$ and restores a finite asymptote on a scale of order
+$1/\gamma$. This separates propagation-controlled and resonance-controlled
+buildup.
+
+For a finite $N$-cycle burst, the same convolution defines
+\begin{equation}
+ N_{95}=\min\left\{N:\max_t|u_n^{(N)}(t)|
+ \geq0.95\,|u_{n,\mathrm{CW}}|\right\},
+\end{equation}
+with the comparison metric to be refined for dispersive wave packets. A second
+observable is the time-dependent modal purity
+\begin{equation}
+ P_m(t)=\frac{|A_m(t)|^2}{\sum_n|A_n(t)|^2}.
+\end{equation}
