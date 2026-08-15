@@ -1,0 +1,29 @@
+\section{Linear thermoelastic plate model}
+
+Consider a homogeneous isotropic plate occupying $-h\le z\le h$, unbounded in
+$x$, with displacement $\bm u=(u_x,u_z)$. In the small-strain approximation,
+\begin{align}
+  \epsilon_{ij} &= \frac{1}{2}(\partial_i u_j+\partial_j u_i),\\
+  \sigma_{ij} &= \lambda\epsilon_{kk}\delta_{ij}
+  +2\mu\epsilon_{ij}-(3\lambda+2\mu)\alpha\Delta T\,\delta_{ij},\\
+  \rho\,\ddot u_i &= \partial_j\sigma_{ij},
+\end{align}
+where $\lambda$ and $\mu$ are the Lam\'e constants, $\rho$ is density, and
+$\alpha$ is the coefficient of linear thermal expansion. The free surfaces obey
+\begin{equation}
+  \sigma_{xz}(x,\pm h,t)=\sigma_{zz}(x,\pm h,t)=0.
+\end{equation}
+The bulk longitudinal and transverse speeds are
+\begin{equation}
+  c_L=\sqrt{\frac{\lambda+2\mu}{\rho}},\qquad
+  c_T=\sqrt{\frac{\mu}{\rho}}.
+\end{equation}
+
+The temperature rise is governed, at the simplest level, by
+\begin{equation}
+  \rho C_p\,\partial_t\Delta T-K\nabla^2\Delta T=Q(x,z,t),
+  \label{eq:heat}
+\end{equation}
+with volumetric heat capacity $\rho C_p$, conductivity $K$, and absorbed optical
+power density $Q$. Equations~\eqref{eq:heat} and the elastodynamic equations are
+one-way coupled when mechanical heating is negligible.

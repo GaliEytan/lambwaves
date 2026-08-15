@@ -1,0 +1,25 @@
+\section{Thermoelastic laser forcing}
+
+We write a switched-on modulated source as
+\begin{equation}
+ Q(x,z,t)=\Heaviside(t)\,Q_0 f(x)a(z)\cos(\Omega t),
+ \label{eq:laser-source}
+\end{equation}
+where $f$ is the beam profile and $a$ describes optical absorption through the
+thickness. A Gaussian line source of $1/e$ half-width $w$ has
+\begin{equation}
+  f(x)=\exp(-x^2/w^2),\qquad
+  \widetilde f(k)=\sqrt{\pi}w\exp(-k^2w^2/4).
+\end{equation}
+Thus reducing $w$ broadens the accessible wavenumber range.
+
+After solving the heat equation, the generalized force on mode $n$ can be
+written schematically as
+\begin{equation}
+  F_n(k,t)=\int_{-h}^{h}
+  \bm\phi_n^{\dagger}(z;k)\cdot
+  \bm f_{\mathrm{th}}(k,z,t)\,\dd z.
+  \label{eq:modal-overlap}
+\end{equation}
+This overlap is essential: intersection of the source spectrum with a dispersion
+branch shows that a mode is available, not that it is strongly excited.

@@ -1,0 +1,26 @@
+CALCULATION AND VALIDATION SUMMARY
+rho=2700 kg/m^3, cL=6320 m/s, cT=3130 m/s, d=0.001 m
+Grid: 260 K values; 7000 frequency samples; Wmax=12
+
+Maximum normalized characteristic residual: A=1.990e-09, S=2.441e-09
+Low-frequency median relative error: A0 thin-plate=0.150%, S0 plate-speed=0.011%
+Expected low-frequency S0 plate speed=5438.367 m/s; cT/cL=0.495253
+
+Convergence and analytic checks:
+  max |W(3500 scan)-W(7000 scan)|=3.251e-12
+  settling-time change on halving dt=0.050 drive cycles
+  oscillator initial displacement residual=0.000e+00
+  oscillator initial velocity residual=0.000e+00
+
+Detected higher-mode local minima (quadratically refined):
+  S1: K=0.79889, fd=2.856812 MHz mm, f=2.856812 MHz
+
+Normalized causal study (not an absolute thermoelastic amplitude):
+  drive=0.651892 MHz; x=20.000 mm; width=1.000 mm; gamma/Omega=0.01
+  group delay x/|vg|=6.583406 us
+  5% settling time=76.393052 us (49.8 cycles)
+  N95 proxy=50 cycles
+
+Parameter sweep (27 cases): finite N95 range=24--117 cycles; see parameter_sweep.csv
+
+Dispersion uses the full isotropic Rayleigh–Lamb equations. The causal study uses unit scalar modal overlap and constant damping; it validates the framework, not absolute experimental amplitude.

@@ -1,0 +1,32 @@
+\section{Lamb modes and dispersion}
+
+For a harmonic factor $\exp[\ii(kx-\omega t)]$, define the thickness
+wavenumbers
+\begin{equation}
+  p^2=\frac{\omega^2}{c_L^2}-k^2,
+  \qquad
+  q^2=\frac{\omega^2}{c_T^2}-k^2.
+\end{equation}
+Applying the traction-free conditions produces the Rayleigh--Lamb equations
+\begin{align}
+ \frac{\tan(qh)}{\tan(ph)}
+ &=-\frac{4k^2pq}{(q^2-k^2)^2}, &&\text{symmetric},\\
+ \frac{\tan(qh)}{\tan(ph)}
+ &=-\frac{(q^2-k^2)^2}{4k^2pq}, &&\text{antisymmetric}.
+\end{align}
+Their roots define branches $\omega_n(k)$ and eigenfields $\bm\phi_n(z;k)$.
+The corresponding phase and group velocities are
+\begin{equation}
+  \vph=\frac{\omega_n}{k},\qquad
+  \vg=\frac{\dd\omega_n}{\dd k}.
+\end{equation}
+
+Near a non-degenerate ZGV point $k_0$,
+\begin{equation}
+  \omega_n(k)=\omega_0+\frac{D}{2}(k-k_0)^2
+  +\mathcal O\!\left((k-k_0)^3\right),
+  \qquad D=\omega_n''(k_0).
+  \label{eq:zgv-expansion}
+\end{equation}
+Because $\vg(k_0)=0$, the scale $x/\vg$ is singular there even though the local
+resonance remains physically observable.
