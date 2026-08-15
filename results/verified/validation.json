@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "rho_kg_m3": 2700.0,
+    "cL_m_s": 6320.0,
+    "cT_m_s": 3130.0,
+    "thickness_m": 0.001,
+    "K_min": 0.04,
+    "K_max": 8.0,
+    "K_count": 260,
+    "root_scan": 7000
+  },
+  "validation": {
+    "max_residual": 2.636976501486527e-10,
+    "scan_convergence": 4.107825191113079e-13,
+    "A0_low_frequency_error": 0.0013616243375400485,
+    "S0_low_frequency_error": 0.00010501176651031038,
+    "initial_displacement_residual": 0.0,
+    "initial_velocity_residual": 0.0
+  }
+}

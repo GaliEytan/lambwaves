@@ -1,0 +1,36 @@
+\chapter{Results and scientific status}\label{ch:results}
+\section{Level A: verified dispersion}
+For the recorded representative inputs $d=\SI{1}{mm}$,
+$\rho=\SI{2700}{kg.m^{-3}}$, $c_L=\SI{6320}{m.s^{-1}}$, and
+$c_T=\SI{3130}{m.s^{-1}}$, the characteristic residual is below
+$2.44\times10^{-9}$. Low-$k$ median relative errors are 0.011\% for S0 and
+0.150\% for A0. The isolated first symmetric minimum is
+$fd=\SI{2.8568}{MHz.mm}$ at $kh=0.7989$. This is consistent with the ZGV
+frequency scale reported for aluminum plates by Prada et al. \cite{prada2005};
+all material differences must be retained in any quantitative comparison.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.92\linewidth]{dispersion.png}
+\caption{Verified numerical Rayleigh--Lamb roots. Higher-order curves are broken
+where frequency continuation is discontinuous; eigenfield-overlap tracking is
+required before those segments are assigned as complete physical branches.}
+\label{fig:dispersion}
+\end{figure}
+
+\section{Level B: physical laser coupling}
+The governing overlap is established analytically in
+\cref{eq:physical-overlap}. Numerical overlap curves, beam-width and absorption-
+depth sweeps, and dimensional amplitudes are \emph{pending}. They require
+normalized eigenfields plus the optical and thermal inputs listed in
+\texttt{SCIENTIFIC\_STATUS.md}. No scalar unit-overlap output is reported as a
+physical result.
+
+\section{Level C: causal steady-state formation}
+The exact modal decomposition and robust measurement definition are established
+in \cref{ch:causal}. Existing scalar-overlap calculations are archived under
+\texttt{results/preliminary}; their earlier ``modal purity'', 50-cycle settling
+example, and parameter sweep are illustrative regression data only. They use
+prescribed damping, equal scalar overlaps, and an uncalibrated spectral window.
+They cannot validate experimental $N_{95}$ or selectivity. Physical results near
+ordinary, cutoff, and ZGV points remain pending a detector model, calibrated
+attenuation, and the level-B overlaps.

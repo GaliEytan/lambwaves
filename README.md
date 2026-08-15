@@ -1,35 +1,48 @@
-# Causal buildup of laser-excited Lamb waves
+# Causal buildup and laser excitation of Lamb waves
 
-LaTeX manuscript and, later, numerical code for studying the transient formation
-and selective excitation of Lamb waves by thermoelastic laser sources.
+Thesis-style LaTeX manuscript and reproducible numerical benchmark for the causal
+buildup and selective thermoelastic laser excitation of Lamb waves.
+
+The repository distinguishes three scientific levels:
+
+- **Verified:** Rayleigh--Lamb dispersion, analytic low-frequency limits,
+  determinant residuals, scan convergence, and oscillator initial conditions.
+- **Preliminary:** preserved scalar-unit-overlap regression calculations. These
+  are not physical modal purity or absolute thermoelastic predictions.
+- **Pending:** normalized eigenfields, physical thermoelastic overlaps,
+  energy/group-velocity checks, calibrated damping/detector models, and causal
+  experimental predictions.
+
+See `SCIENTIFIC_STATUS.md` before interpreting any numerical output.
 
 ## Build
 
-With a LaTeX distribution installed:
+With TeX Live and `latexmk` installed:
 
 ```powershell
 latexmk -pdf main.tex
 ```
 
-## Reproduce the calculations
+The result is `main.pdf`. The source is organized under `frontmatter/`,
+`chapters/`, and `appendices/`.
+
+## Set up and test the calculations
 
 Create a virtual environment, install the pinned packages, and run:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
-.\.venv\Scripts\python calculations\run_all.py
+.\.venv\Scripts\python -m pytest -q
+.\.venv\Scripts\python -m lambwaves.run
 ```
 
-The Python script solves the isotropic Rayleigh--Lamb equations for a representative
-1 mm aluminum plate, evaluates dispersion derivatives and ZGV candidates, and
-runs a normalized causal modal-integral study. It writes figures, a CSV table,
-the complete workspace, and a validation summary to `results/`.
+Verified outputs are written to `results/verified/`, including metadata in JSON
+and machine-readable CSV data. The benchmark uses explicitly recorded
+representative aluminum inputs; they are not fitted specimen properties.
 
-The dispersion calculation is dimensional and uses the full characteristic
-equations. The initial transient calculation deliberately uses scalar unit modal
-overlap; absolute thermoelastic amplitudes require an experiment-specific optical
-absorption profile and normalized Lamb eigenfields.
+## Legacy preliminary calculation
 
-`calculations/run_all.m` is an equivalent MATLAB reference implementation, but
-the reported repository results are generated and validated with the Python code.
+`calculations/run_all.py` and `calculations/run_all.m` preserve the original
+unit-overlap study. Their outputs live under `results/preliminary/`; do not cite
+their settling time, `N95`, or mode ratio as experimental predictions.

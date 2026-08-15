@@ -1,0 +1,15 @@
+\chapter{Thermoelastic modal projection}\label{app:projection}
+Let $\tau_{ij}=(3\lambda+2\mu)\alpha\Delta T\delta_{ij}$. The strong equation is
+$\rho\ddot u_i-(C_{ijkl}u_{k,l})_{,j}=-\tau_{ij,j}$. Multiplication by $U_i^*$
+and integration gives a volume term $\int U_{i,j}^*\tau_{ij}\dd z$ plus the
+boundary term $-[U_i^*\tau_{ij}n_j]$. If elastic traction alone is prescribed,
+that surface term is an applied thermal traction. If total traction is zero, it
+cancels the boundary term from integration of elastic stress, leaving
+\cref{eq:weak-thermal}. This bookkeeping is why a truncated body-force density
+cannot be used without its surface distribution.
+
+With $M_n=1$ and $\tau_{ij}=\tau\delta_{ij}$,
+\begin{equation}F_n=\int_{-h}^{h}\tau(k,z,t)
+[-\ii kU_{n,x}^*(z;k)+\partial_zU_{n,z}^*(z;k)]\dd z.
+\end{equation}
+The bracket is the conjugate modal dilatation under the adopted Fourier sign.

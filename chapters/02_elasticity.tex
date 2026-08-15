@@ -1,0 +1,37 @@
+\chapter{Linear elasticity}\label{ch:elasticity}
+Let $\vect u$ be displacement. Linearizing the change of line length gives
+\begin{equation}\epsilon_{ij}=\tfrac12(u_{i,j}+u_{j,i}).\label{eq:strain}\end{equation}
+Isotropy restricts Hooke's law to
+\begin{equation}\sigma_{ij}=\lambda\epsilon_{kk}\delta_{ij}+2\mu\epsilon_{ij}.
+\label{eq:hooke}\end{equation}
+Angular momentum makes $\sigma_{ij}=\sigma_{ji}$, while linear momentum gives
+\begin{equation}\rho\ddot u_i=\sigma_{ij,j}+b_i.\label{eq:momentum}\end{equation}
+For a homogeneous body these combine into
+\begin{equation}
+ \rho\ddot{\vect u}=(\lambda+\mu)\nabla(\nabla\!\cdot\!\vect u)
+ +\mu\nabla^2\vect u+\vect b.\label{eq:navier}
+\end{equation}
+
+The sagittal problem is invariant in $y$ and polarized in the $x$--$z$ plane,
+so $\partial_y=0$ and $\vect u=(u_x,0,u_z)$. The general Helmholtz form is
+$\vect u=\nabla\phi+\nabla\times\vect\Psi$. Only $\Psi_y$ contributes here, hence
+\begin{equation}
+ \vect u=\nabla\phi+\nabla\times(\psi\hat{\vect y}),\quad
+ u_x=\phi_{,x}-\psi_{,z},\quad u_z=\phi_{,z}+\psi_{,x}.\label{eq:potentials}
+\end{equation}
+This is a symmetry restriction, not a claim about a general 3D vector potential.
+The Helmholtz potentials have gauge freedom; the solenoidal choice and sagittal
+polarization select a representative up to irrelevant constants. Divergence and
+curl of \cref{eq:navier} give
+\begin{equation}
+ \nabla^2\phi-c_L^{-2}\ddot\phi=0,\quad
+ \nabla^2\psi-c_T^{-2}\ddot\psi=0,
+ \quad c_L^2=(\lambda+2\mu)/\rho,\ c_T^2=\mu/\rho.\label{eq:potential-waves}
+\end{equation}
+Multiplying \cref{eq:momentum} by velocity yields
+\begin{equation}
+ e=\tfrac12\rho\dot u_i\dot u_i+\tfrac12\sigma_{ij}\epsilon_{ij},\quad
+ S_j=-\sigma_{ij}\dot u_i,\quad \partial_t e+\partial_jS_j=b_i\dot u_i.
+ \label{eq:energy-balance}
+\end{equation}
+Detailed index steps and dimensions are in \cref{app:elasticity}.

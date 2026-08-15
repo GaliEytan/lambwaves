@@ -1,4 +1,9 @@
-"""Reproduce the first Lamb-wave dispersion and causal-buildup study."""
+"""Legacy preliminary calculation.
+
+This script preserves the original scalar-unit-overlap regression calculation.
+It is not the thesis entry point and does not produce physical modal purity.
+Use ``python -m lambwaves.run`` for verified outputs.
+"""
 from __future__ import annotations
 
 import csv

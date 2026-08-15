@@ -1,0 +1,18 @@
+\chapter{Elasticity algebra and dimensions}\label{app:elasticity}
+Using $\dot\epsilon_{ij}=\tfrac12(\dot u_{i,j}+\dot u_{j,i})$ and symmetric
+stress, $\sigma_{ij}\dot u_{i,j}=\sigma_{ij}\dot\epsilon_{ij}$. Then
+\begin{align}
+\dot u_i\sigma_{ij,j}&=(\sigma_{ij}\dot u_i)_{,j}-\sigma_{ij}\dot\epsilon_{ij},\\
+\rho\dot u_i\ddot u_i&=\partial_t(\tfrac12\rho\dot u_i\dot u_i),\\
+\sigma_{ij}\dot\epsilon_{ij}&=\partial_t(\tfrac12\sigma_{ij}\epsilon_{ij})
+\end{align}
+for time-independent linear stiffness. These identities give
+\cref{eq:energy-balance}. Dimensions are
+$[\rho\ddot u]=\si{N.m^{-3}}$, $[e]=\si{J.m^{-3}}$, and
+$[S]=\si{W.m^{-2}}$.
+
+Taking divergence of source-free \cref{eq:navier} yields
+$\rho\partial_t^2(\nabla\cdot\vect u)=(\lambda+2\mu)\nabla^2(\nabla\cdot\vect u)$;
+taking curl eliminates the gradient term and gives
+$\rho\partial_t^2(\nabla\times\vect u)=\mu\nabla^2(\nabla\times\vect u)$.
+These prove the two potential equations rather than assuming their speeds.
