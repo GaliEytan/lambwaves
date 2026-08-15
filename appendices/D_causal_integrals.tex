@@ -1,0 +1,18 @@
+\chapter{Causal integral formulas}\label{app:causal-integrals}
+For a unit impulse, $a=G_n$. For a force $f(t)$ of finite support,
+$a=G_n*f$. Let $r(t)$ be the switched-sinusoid complex solution
+\cref{eq:switched-solution}. A rectangular $N$-cycle burst is
+\begin{equation}a_N^c(t)=r(t)-\Heaviside(t-NT)r(t-NT),\qquad T=2\pi/\Omega,
+\end{equation}
+because the phase delay $\ee^{-\ii\Omega NT}=1$. Direct evaluation at $t=0$
+uses $C_++C_-=-H_n$ and
+$s_+C_++s_-C_-=\ii\Omega H_n$, proving $a(0)=\dot a(0)=0$.
+
+For an impulse spectrum $B(k)$ near a one-dimensional quadratic ZGV,
+$\omega=\omega_0+D(k-k_0)^2/2$, the local integral is proportional to
+\begin{equation}
+B(k_0)\ee^{\ii(k_0x-\omega_0t)}
+\int_{-\infty}^{\infty}\ee^{\ii[(k-k_0)x-Dt(k-k_0)^2/2]}\dd k,
+\end{equation}
+which is $O(t^{-1/2})$ for fixed $x$ if $D\ne0$ and $B(k_0)\ne0$. A two-dimensional
+radial integral, a vanishing overlap, or a degenerate extremum changes the power.

@@ -1,0 +1,64 @@
+\chapter{Thermoelastic laser source}\label{ch:source}
+Let absorbed volumetric power be
+\begin{equation}
+ Q(x,z,t)=\eta_{\rm abs}P(t)g_w(x)\,a_\delta(z),\quad
+ g_w=\frac{\ee^{-x^2/w^2}}{\sqrt\pi w},\quad
+ a_\delta=\frac{\ee^{-(h-z)/\delta}}{\delta[1-\ee^{-2h/\delta}]},
+ \label{eq:physical-Q}
+\end{equation}
+where $P$ is incident line power (\si{W.m^{-1}}), $\eta_{\rm abs}=1-R$ is
+absorbed fraction, $w$ is the stated $1/e$ intensity half-width, and $\delta$ is
+absorption depth. Both profiles integrate to unity, so \cref{eq:physical-Q} has
+units \si{W.m^{-3}}. \TODO{Supply wavelength-dependent $R$, $\delta$, and the
+measured beam convention.}
+
+With one-way coupling, temperature satisfies
+\begin{equation}
+ \rho C_p\partial_t\Delta T-K_T(\partial_x^2+\partial_z^2)\Delta T=Q.
+ \label{eq:heat}
+\end{equation}
+We initially impose thermally insulating faces,
+$\partial_z\Delta T(\pm h,t)=0$, appropriate only when heat loss during the
+acoustic record is negligible. \TODO{Replace by measured convection/contact
+conditions when the experiment is fixed.} Fourier transformation in $x$ and
+expansion in Neumann thickness eigenfunctions $\chi_m$ gives
+\begin{equation}
+ \dot T_m+\kappa(k^2+\beta_m^2)T_m=Q_m/(\rho C_p),\quad
+ T_m(k,t)=\frac1{\rho C_p}\int_0^t\!Q_m(k,t')
+ \ee^{-\kappa(k^2+\beta_m^2)(t-t')}\dd t',\label{eq:heat-solution}
+\end{equation}
+where $\kappa=K_T/(\rho C_p)$ and
+$Q_m=\int_{-h}^h\chi_mQ\dd z$. Negligible diffusion during a short pulse means
+$\kappa(k^2+\beta_m^2)\tau\ll1$ for all materially excited components, not merely
+``a nanosecond pulse.''
+
+Thermal strain is $\epsilon_{ij}^{\rm th}=\alpha\Delta T\delta_{ij}$ and
+\begin{equation}
+ \sigma_{ij}=C_{ijkl}(\epsilon_{kl}-\epsilon_{kl}^{\rm th})
+ =\sigma_{ij}^{\rm el}-\underbrace{(3\lambda+2\mu)\alpha\Delta T\delta_{ij}}_{\tau_{ij}}.
+ \label{eq:thermal-stress}
+\end{equation}
+Writing $\rho\ddot u_i-\sigma_{ij,j}^{\rm el}=-\tau_{ij,j}$ produces a body
+force but also requires distributional surface terms if $\tau$ terminates at a
+boundary. The safer weak form follows after multiplying by a test field $V_i^*$:
+\begin{equation}
+ \int\rho V_i^*\ddot u_i\dd z+\int V_{i,j}^*C_{ijkl}u_{k,l}\dd z
+ =\int V_{i,j}^*\tau_{ij}\dd z,
+ \label{eq:weak-thermal}
+\end{equation}
+when total traction is zero. The integration by parts has included the surface
+term correctly.
+
+For mass-normalized $\vect U_n(z;k)$, modal projection gives the physical force
+\begin{equation}
+ F_n(k,t)=\int_{-h}^{h}U_{n,i,j}^*(z;k)\tau_{ij}(k,z,t)\dd z,
+ \quad [F_n]=\si{m.s^{-2}}
+ \label{eq:physical-overlap}
+\end{equation}
+under normalization \cref{eq:modal-mass}. The $x$ derivative contributes
+$-\ii kU_{n,x}^*$ and the $z$ derivative $\partial_zU_{n,z}^*$. Source parity
+then controls S/A coupling. Top-surface absorption breaks mid-plane symmetry and
+generally excites both families; symmetric two-sided heating can suppress the
+parity-incompatible overlap. Beam width sets the $k$ spectrum, while absorption
+depth weights modal dilatation through thickness. Appendix~\ref{app:projection}
+states the equivalent body-force and weak forms side by side.

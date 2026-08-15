@@ -1,0 +1,52 @@
+\chapter{Causal modal response}\label{ch:causal}
+For each normalized mode,
+\begin{equation}\ddot a_n+2\gamma_n\dot a_n+\omega_n^2a_n=F_n,quad a_n(0)=\dot a_n(0)=0.
+\label{eq:modal-ode}\end{equation}
+For underdamping, $\omega_{d,n}=\sqrt{\omega_n^2-\gamma_n^2}$ and the retarded
+Green function is
+\begin{equation}G_n(t)=\Heaviside(t)\ee^{-\gamma_nt}\sin(\omega_{d,n}t)/\omega_{d,n},
+\quad a_n(t)=\int_0^tG_n(t-t')F_n(t')\dd t'.\label{eq:modal-green}\end{equation}
+This covers impulses, arbitrary pulses, and bursts. For
+$F_n=\operatorname{Re}[\widehat F_n\ee^{-\ii\Omega t}]\Heaviside(t)$, use the
+complex solution
+\begin{equation}
+ a_n^c=H_n\ee^{-\ii\Omega t}+C_+\ee^{s_+t}+C_-\ee^{s_-t},
+\quad H_n=\frac{\widehat F_n}{\omega_n^2-\Omega^2-2\ii\gamma_n\Omega},
+\label{eq:switched-solution}
+\end{equation}
+where $s_\pm=-\gamma_n\pm\ii\omega_{d,n}$,
+$C_+=H_n(\ii\Omega+s_-)/(s_+-s_-)$, and $C_-=-H_n-C_+$. Consequently
+$a_n=a_{n,\rm ss}+a_{n,\rm tr}$, and substitution at $t=0$ verifies both zero
+initial conditions. An $N$-cycle burst is obtained by subtracting a delayed copy
+at $t=NT$, so no new oscillator solution is required; details are in
+\cref{app:causal-integrals}.
+
+The physical field is
+\begin{equation}
+ \vect u(x,z,t)=\sum_n\int\frac{\dd k}{2\pi}\,
+ a_n(k,t)\vect U_n(z;k)\ee^{\ii kx}.\label{eq:field-reconstruction}
+\end{equation}
+For a smooth nondegenerate stationary point of phase $kx-\omega_n(k)t$,
+$x/t=\partial\omega_n/\partial k$ and a one-dimensional $k$ integral has a
+$t^{-1/2}$ leading factor if the source and detector overlap is nonzero there.
+Endpoints and cutoffs require endpoint asymptotics. Coalescing stationary points
+require a uniform approximation. At a quadratic one-dimensional ZGV extremum,
+an impulse contribution may scale as $t^{-1/2}$; resonant convolution can scale
+as $t^{1/2}$ only before attenuation dominates and only for nonzero smooth
+overlap. Different source dimensionality changes the power law. These conditions
+are part of the claim, not footnotes.
+
+Arrival $x/v_g$ locates a wave-packet front or saddle contribution. It does not
+measure decay of $a_{n,\rm tr}$, which also depends on $\gamma_n$, dispersion
+curvature, bandwidth, and distance. Let $y(t)$ be the measured signal after a
+declared linear detector response $D(\omega)$. With analytic signal $y_a$, define
+the cycle-smoothed envelope $A(t)=T^{-1}\int_{t-T/2}^{t+T/2}|y_a(s)|\dd s$ and
+\begin{equation}
+ t_{\rm set}(\epsilon)=\inf\{t:A_{\rm err}(s)\le\epsilon A_{\rm ss}
+ \text{ for every }s\ge t\},\label{eq:settling}
+\end{equation}
+where $A_{\rm err}$ is the envelope of $y-y_{\rm ss}$. This avoids division by
+instantaneous zeros. Here $N_{95}$ will mean the smallest integer burst length
+whose demodulated end-of-burst amplitude reaches 95\% of the CW amplitude and
+remains within 5\% during the final cycle. Energy-based alternatives must receive
+different notation.

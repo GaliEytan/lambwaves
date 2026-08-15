@@ -1,0 +1,54 @@
+\chapter{Traction-free plate eigenmodes}\label{ch:modes}
+On $z=\pm h$, $t_i=\sigma_{ij}n_j=0$. Since
+$\vect n=\pm\hat{\vect z}$, the independent components are
+\begin{equation}\sigma_{xz}(\pm h)=0,\qquad\sigma_{zz}(\pm h)=0.
+\label{eq:free-traction}\end{equation}
+They are vector components, not quantities to add; $\sigma_{xz}=-\sigma_{zz}$ is
+not the free-surface condition.
+
+For $\ee^{\ii(kx-\omega t)}$,
+\begin{equation}p^2=\omega^2/c_L^2-k^2,qquad q^2=\omega^2/c_T^2-k^2.\label{eq:pq}\end{equation}
+The general potentials are $\phi=A\cos pz+B\sin pz$ and
+$\psi=C\cos qz+D\sin qz$. Complex square roots retain these formulas when $p$
+or $q$ is imaginary. Direct differentiation gives
+\begin{align}
+u_x&=\ii k\phi-\psi',&u_z&=\phi'+\ii k\psi,\label{eq:eigen-u}\\
+\sigma_{xz}&=\mu[2\ii k\phi'+(q^2-k^2)\psi],\label{eq:eigen-sxz}\\
+\sigma_{zz}&=-\mu(q^2-k^2)\phi+2\ii\mu k\psi'.\label{eq:eigen-szz}
+\end{align}
+Symmetric modes use $\phi=A\cos pz$, $\psi=D\sin qz$; antisymmetric modes use
+$\phi=B\sin pz$, $\psi=C\cos qz$. The boundary systems are
+\begin{equation}
+\underbrace{\mu\begin{pmatrix}-2\ii kp\sin ph&(q^2-k^2)\sin qh\\
+-(q^2-k^2)\cos ph&2\ii kq\cos qh\end{pmatrix}}_{\vect M_S}
+\binom AD=0,\label{eq:matrix-S}
+\end{equation}
+\begin{equation}
+\underbrace{\mu\begin{pmatrix}2\ii kp\cos ph&(q^2-k^2)\cos qh\\
+-(q^2-k^2)\sin ph&-2\ii kq\sin qh\end{pmatrix}}_{\vect M_A}
+\binom BC=0.\label{eq:matrix-A}
+\end{equation}
+Zero determinants yield
+\begin{align}
+\tan(qh)/\tan(ph)&=-4k^2pq/(q^2-k^2)^2&&(S),\label{eq:RL-S}\\
+\tan(qh)/\tan(ph)&=-(q^2-k^2)^2/(4k^2pq)&&(A).\label{eq:RL-A}
+\end{align}
+The determinant forms are numerically preferable; $p=0$ and $q=0$ factors are
+removable limits. A null vector and \cref{eq:eigen-u}--\cref{eq:eigen-szz} give
+the full eigenfield.
+
+One mass normalization is
+\begin{equation}M_n=\int_{-h}^{h}\rho\vect U_n^*\!\cdot\vect U_n\dd z=1.
+\label{eq:modal-mass}\end{equation}
+Distinct lossless modes at fixed real $k$ are orthogonal in this inner product.
+With axial power $P_n=\int\avg{S_x}\dd z$ and energy
+$\mathcal E_n=\int\avg e\dd z$, conservation gives
+$P_n/\mathcal E_n=\partial\omega_n/\partial k$; this tests group against energy
+velocity \cite{green2020}. Low-frequency limits are
+\begin{equation}
+\omega_{S0}\sim k\sqrt{E/[\rho(1-\nu^2)]},\qquad
+\omega_{A0}\sim k^2\sqrt{Ed^2/[12\rho(1-\nu^2)]}.\label{eq:low-limits}
+\end{equation}
+Higher branches have thickness cutoffs; negative slope marks backward energy
+transport, and a finite-$k$ extremum is a ZGV point. Determinant and normalization
+details are in \cref{app:boundary}.

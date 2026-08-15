@@ -13,3 +13,4 @@ results/calculation_data.mat
 .matlab-prefs/
 .matplotlib/
 __pycache__/
+.pytest_cache/

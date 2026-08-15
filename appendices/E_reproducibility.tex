@@ -1,0 +1,14 @@
+\chapter{Reproducibility record}\label{app:reproducibility}
+From the repository root on Windows:
+\begin{verbatim}
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\python -m pytest
+.\.venv\Scripts\python -m lambwaves.run
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+\end{verbatim}
+Pinned package versions are in \texttt{requirements.txt}. Verified outputs are
+written to \texttt{results/verified}; legacy unit-overlap artifacts are kept in
+\texttt{results/preliminary}. Every generated data file includes material and
+grid metadata. The repository does not yet encode an experimental specimen;
+items required from the author are listed in \texttt{SCIENTIFIC\_STATUS.md}.

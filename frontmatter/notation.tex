@@ -1,0 +1,24 @@
+\chapter*{Notation and conventions}
+\addcontentsline{toc}{chapter}{Notation and conventions}
+The plate occupies $-h\le z\le h$ and has thickness $d=2h$. Repeated Latin
+indices imply summation. Bold symbols are vectors; a dot is a time derivative
+and ${}^*$ complex conjugation. The Fourier convention is
+\begin{equation}
+ \widetilde f(k,\omega)=\iint f(x,t)\ee^{-\ii(kx-\omega t)}\dd x\dd t,
+ \quad f(x,t)=\iint\frac{\widetilde f(k,\omega)}{(2\pi)^2}
+ \ee^{\ii(kx-\omega t)}\dd k\dd\omega.\label{eq:fourier-convention}
+\end{equation}
+Thus positive-frequency phasors multiply $\ee^{-\ii\omega t}$. Stress is
+positive in tension. Absorbed power density $Q$ has units \si{W.m^{-3}}.
+\begin{center}\begin{tabular}{@{}ll@{}}\toprule
+Symbol&Meaning\\\midrule
+$\lambda,\mu$&Lam\'e coefficients (\si{Pa})\\
+$\rho$&density (\si{kg.m^{-3}})\\
+$c_L,c_T$&bulk wave speeds (\si{m.s^{-1}})\\
+$p,q$&thickness wavenumbers (\si{m^{-1}})\\
+$\alpha$&thermal-expansion coefficient (\si{K^{-1}})\\
+$K_T,C_p$&thermal conductivity and specific heat\\
+$\omega_n,\vect U_n$&modal frequency and eigenfield\\
+$M_n,\mathcal E_n,P_n$&modal mass, energy, and axial power\\
+$\gamma_n$&modal amplitude-decay rate (\si{s^{-1}})\\\bottomrule
+\end{tabular}\end{center}

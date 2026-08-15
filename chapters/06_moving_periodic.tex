@@ -1,0 +1,21 @@
+\chapter{Moving and periodic sources}\label{ch:moving}
+For $Q(x,t)=q(x-Vt)$, direct change of variables gives
+\begin{equation}\widetilde Q(k,\omega)=2\pi\widetilde q(k)\delta(\omega-kV).
+\label{eq:moving-spectrum}\end{equation}
+Multiplication by modulation $g(t)$ broadens the constraint to
+$\widetilde Q=\widetilde q(k)\widetilde g(\omega-kV)$. Strong response requires
+$\omega_n(k)\simeq kV$, i.e. source speed equals phase velocity, consistent with
+moving-CW experiments \cite{li2018}; group velocity instead determines energy
+transport after excitation.
+
+For $N$ elements at $x_m=m\Lambda$ with phase delay $m\varphi$,
+\begin{equation}A_N(k)=\sum_{m=0}^{N-1}\ee^{-\ii m(k\Lambda-\varphi)}
+=\ee^{-\ii(N-1)\theta/2}\frac{\sin(N\theta/2)}{\sin(\theta/2)},
+\quad\theta=k\Lambda-\varphi.\label{eq:array-factor}\end{equation}
+The infinite limit is a reciprocal-lattice comb
+$k=(\varphi+2\pi\ell)/\Lambda$. Scanned pulses add a temporal delay to each
+element and couple $k$ and $\omega$. Spectral intersection is necessary but not
+sufficient: the physical amplitude contains the overlap
+\cref{eq:physical-overlap}. Causality further means that selectivity develops
+only after undesired modal transients and the finite-array turn-on field have
+decayed according to the measurement metric \cref{eq:settling}.

@@ -1,0 +1,26 @@
+\chapter{Numerical method and validation}\label{ch:numerics}
+The reproducible Python entry point is \texttt{python -m lambwaves.run}. The
+package separates material data, determinant evaluation, root finding, modal
+response, and validation. Determinants \cref{eq:matrix-S} and \cref{eq:matrix-A} are used
+without tangent division. Candidate roots are bracketed, refined with Brent's
+method, and checked by a scaled residual. Bulk thresholds are evaluated through
+their limiting determinant rather than accepted as roots.
+
+Continuous branch tracking is a two-stage assignment problem. Predicted frequency
+from the previous two $k$ points supplies a continuation cost; normalized
+eigenfield overlap
+\begin{equation}C_{mn}=\left|\int_{-h}^{h}\rho\vect U_m^*(z;k_j)
+\cdot\vect U_n(z;k_{j+1})\dd z\right|\label{eq:tracking-overlap}
+\end{equation}
+breaks close-frequency ambiguities. The current code implements frequency
+continuation and exposes eigenfield-overlap tracking as pending rather than
+mislabeling sorted roots. Verified outputs therefore emphasize fundamental modes
+and the first isolated S-branch minimum.
+
+Validation includes: characteristic residual; root-scan and $k$-grid refinement;
+the two limits in \cref{eq:low-limits}; analytic cutoff frequencies at $k=0$;
+zero initial conditions in \cref{eq:switched-solution}; and time-step refinement.
+Energy/group-velocity consistency and physical modal overlaps are test targets
+whose absence blocks level-B and level-C claims. The representative aluminum
+constants are computational benchmark inputs, not a characterization of the
+author's specimen.
